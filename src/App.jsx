@@ -5,8 +5,8 @@ import Container from 'components/Container/Container';
 import Loader from 'components/Loader/Loader';
 import PageNotFound from 'components/PageNotFound/PageNotFound';
 import { ToastContainer } from 'react-toastify';
-const Homepage = lazy(() =>
-  import(/* webpackChunkName: "Homepage" */ 'pages/Homepage/Homepage')
+const Feedback = lazy(() =>
+  import(/* webpackChunkName: "Feedback" */ 'pages/Feedback/Feedback')
 );
 
 export default function App() {
@@ -15,12 +15,12 @@ export default function App() {
       <Suspense fallback={<Loader />}>
         <Container>
           <Routes>
-            <Route path="/" element={<Homepage />} />
+            <Route path="/" element={<Feedback />} />
 
             <Route path="*" element={<PageNotFound />} />
           </Routes>
-          <ToastContainer />
         </Container>
+        <ToastContainer />
       </Suspense>
     </>
   );

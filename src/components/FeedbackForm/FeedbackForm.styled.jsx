@@ -2,20 +2,38 @@ import styled from 'styled-components';
 import { Field } from 'formik';
 
 export const FormContainer = styled.div`
-  width: 300px;
+  width: 350px;
+  margin-top: 180px;
   padding: 10px;
-  background: #fff;
   border-radius: 20px;
   @media screen and (min-width: 768px) {
-    width: 533px;
+    width: 557px;
   }
 `;
-export const FormTitle = styled.div`
-  padding-top: 180px;
-  padding-left: 150px;
+export const FormTitle = styled.h1`
+  font-weight: 400;
   font-size: 40px;
   line-height: 130%;
   color: #3e3e3e;
+`;
+
+export const InputContainer = styled.div`
+  position: relative;
+  /* margin-top: 40px; */
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  height: 75px;
+  padding-left: 15px;
+  /* border: #fff; */
+  /* border-bottom: 1px solid #e0e0e0; */
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+
+  &:hover,
+  &:focus {
+    border: 2px solid #f1bb08;
+  }
 `;
 
 export const Input = styled(Field)`
@@ -26,6 +44,8 @@ export const Input = styled(Field)`
   border: none;
   ::placeholder {
     font-size: 18px;
+    line-height: 32px;
+    color: #2d2d2d;
   }
   @media screen and (min-width: 768px) {
     width: 373px;
@@ -36,29 +56,23 @@ export const Error = styled.p`
   position: absolute;
   font-size: 12px;
   color: red;
-  top: -24px;
+  top: -20px;
 `;
 
-export const InputContainer = styled.div`
+export const TextareaContainer = styled.div`
   position: relative;
-  display: flex;
-  align-items: center;
-  border: #fff;
-  border-bottom: 1px solid #e0e0e0;
-  margin-top: 40px;
+`;
 
-  &:hover {
-    border-bottom: 1px solid #1a8f75;
-  }
+export const TextareaErrorWrapper = styled.div`
+  margin-left: 15px;
 `;
 
 export const Textarea = styled.textarea`
-  margin-top: 40px;
-  margin-bottom: 40px;
-  padding: 10px;
+  margin-top: 8px;
+  padding: 31px 41px;
 
-  width: 280px;
-  height: 80px;
+  width: 328px;
+  height: 190px;
 
   border: none;
   outline: 1px solid #e0e0e0;
@@ -66,32 +80,36 @@ export const Textarea = styled.textarea`
   resize: none;
 
   @media screen and (min-width: 768px) {
-    width: 480px;
+    width: 538px;
+  }
+  &:hover,
+  &:focus {
+    border: 2px solid #f1bb08;
   }
 `;
 
 export const Btn = styled.button`
-  width: 280px;
+  width: 200px;
   height: 50px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 23px;
   background-color: #fad34f;
   border-radius: 20px;
   border: none;
-  @media screen and (min-width: 768px) {
-    width: 300px;
-  }
 
-  &:disabled {
-    background-color: #1a6f75;
+  @media screen and (min-width: 768px) {
+    width: 218px;
+    height: 73px;
   }
 
   &:hover,
-  &:focus {
-    background-color: #1a8f75;
+  &:focus,
+  &:disabled {
+    background-color: #dfb015;
   }
 `;
 
 export const BtnTitle = styled.span`
+  font-size: 18px;
+  line-height: 18px;
   color: #fff; ;
 `;

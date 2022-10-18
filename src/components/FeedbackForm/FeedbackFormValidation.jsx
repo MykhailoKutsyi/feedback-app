@@ -17,6 +17,10 @@ function FeedbackFormValidation() {
         test: value => value && value[0] !== '-',
       })
       .matches(/[a-z0-9]+@[a-z0-9]+\.[a-z0-9]{2,3}/, 'Email is invalid'),
+    message: Yup.string()
+      .min(2)
+      .max(500)
+      .required('Type your feedback, please'),
   });
   return validate;
 }

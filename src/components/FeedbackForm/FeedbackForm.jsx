@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 
 import { ErrorMessage, Formik, Form } from 'formik';
+
+import { useDispatch } from 'react-redux';
+import { sendFeedback } from 'redux/session/session-operations';
+
 import FeedbackFormValidation from './FeedbackFormValidation';
 import Icon from 'components/Icon/Icon';
-import { useDispatch } from 'react-redux';
-
-import { sendFeedback } from 'redux/session/session-operations';
 
 import {
   FormContainer,
@@ -14,7 +15,9 @@ import {
   Btn,
   BtnTitle,
   InputContainer,
+  TextareaContainer,
   Textarea,
+  TextareaErrorWrapper,
   Error,
 } from './FeedbackForm.styled';
 
@@ -40,18 +43,16 @@ export default function FeedbackForm() {
     >
       {({ values, handleChange, handleBlur, isSubmitting }) => (
         <FormContainer>
-          <FormTitle>
-            <p>Reach out to us!</p>
-          </FormTitle>
+          <FormTitle>Reach out to us!</FormTitle>
 
           <Form
             style={{
+              marginTop: '50px',
               display: 'flex',
               flexDirection: 'column',
-              alignItems: 'center',
             }}
           >
-            <InputContainer style={{ marginTop: '60px' }}>
+            <InputContainer>
               <Icon id={'#name'} />
               <Input
                 placeholder="Your name*"
@@ -80,16 +81,21 @@ export default function FeedbackForm() {
                 <ErrorMessage name={'email'} />
               </Error>
             </InputContainer>
-
-            <Textarea
-              placeholder="Your message*"
-              maxLength="5000"
-              id="textarea"
-              name="message"
-              value={values.message}
-              onChange={handleChange}
-              onBlur={handleBlur}
-            ></Textarea>
+            <TextareaContainer>
+              <Textarea
+                placeholder="Your message*"
+                id="textarea"
+                name="message"
+                value={values.message}
+                onChange={handleChange}
+                onBlur={handleBlur}
+              ></Textarea>
+              <TextareaErrorWrapper>
+                <Error>
+                  <ErrorMessage name={'message'} />
+                </Error>
+              </TextareaErrorWrapper>
+            </TextareaContainer>
 
             <Btn type="submit" disabled={isSubmitting}>
               <BtnTitle>
