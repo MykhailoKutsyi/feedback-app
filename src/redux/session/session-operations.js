@@ -3,7 +3,8 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-axios.defaults.baseURL = 'http://127.0.0.1:5000/';
+const { REACT_APP_API_URL } = process.env;
+axios.defaults.baseURL = REACT_APP_API_URL;
 
 const sendFeedback = createAsyncThunk(
   '/users/feedback',
