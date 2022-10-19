@@ -32,7 +32,8 @@
 
 `<link>` : https://github.com/MykhailoKutsyi/feedback-app
 
-[ React, Redux, ReduxJs/toolkit, Styled Components ]
+[ React, Redux, ReduxJs/toolkit, Styled Components, react-router-dom, Formik,
+yup ]
 
 #### Backend repo
 
