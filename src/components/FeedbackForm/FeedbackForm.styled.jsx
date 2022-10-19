@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { Field } from 'formik';
-
+export const FormWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+`;
 export const FormContainer = styled.div`
-  width: 350px;
   margin-top: 180px;
-  padding: 10px;
   border-radius: 20px;
   @media screen and (min-width: 768px) {
-    width: 557px;
   }
 `;
 export const FormTitle = styled.h1`
@@ -19,14 +19,11 @@ export const FormTitle = styled.h1`
 
 export const InputContainer = styled.div`
   position: relative;
-  /* margin-top: 40px; */
   margin-bottom: 40px;
   display: flex;
   align-items: center;
   height: 75px;
   padding-left: 15px;
-  /* border: #fff; */
-  /* border-bottom: 1px solid #e0e0e0; */
   border: 1px solid #dcdcdc;
   border-radius: 10px;
 
@@ -38,7 +35,6 @@ export const InputContainer = styled.div`
 
 export const Input = styled(Field)`
   margin-left: 20px;
-  width: 243px;
   height: 30px;
   outline: none;
   border: none;
@@ -68,10 +64,9 @@ export const TextareaErrorWrapper = styled.div`
 `;
 
 export const Textarea = styled.textarea`
-  margin-top: 8px;
   padding: 31px 41px;
 
-  width: 328px;
+  width: 320px;
   height: 190px;
 
   border: none;
@@ -95,6 +90,7 @@ export const Btn = styled.button`
   background-color: #fad34f;
   border-radius: 20px;
   border: none;
+  outline: none;
 
   @media screen and (min-width: 768px) {
     width: 218px;

@@ -27,8 +27,14 @@ export default function FeedbackForm() {
   const dispatch = useDispatch();
 
   const onSubmit = async (values, { resetForm }) => {
-    await dispatch(sendFeedback(values));
-    console.log(values);
+    try {
+      await dispatch(sendFeedback(values));
+      setSubmittedText(true);
+      resetForm();
+    } catch (error) {
+      console.log(error);
+      setError(true);
+    }
   };
 
   return (
@@ -48,8 +54,6 @@ export default function FeedbackForm() {
           <Form
             style={{
               marginTop: '50px',
-              display: 'flex',
-              flexDirection: 'column',
             }}
           >
             <InputContainer>

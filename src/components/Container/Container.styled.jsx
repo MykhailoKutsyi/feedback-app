@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 export const ContainerWrapper = styled.div`
+  position: relative;
   width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
   margin: 0 auto;
 
   @media screen and (min-width: 320px) {

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "linkedin",
+    "link": "https://www.linkedin.com/",
+    "icon": "#linkedin"
+  },
+  {
+    "id": "twitter",
+    "link": "https://twitter.com/",
+    "icon": "#twitter"
+  },
+  {
+    "id": "facebook",
+    "link": "https://www.facebook.com",
+    "icon": "#facebook"
+  },
+  {
+    "id": "pinterest",
+    "link": "https://www.pinterest.com/",
+    "icon": "#pinterest"
+  }
+]
