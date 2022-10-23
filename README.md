@@ -20,6 +20,10 @@
    [http://localhost:3000](http://localhost:3000). This page will automatically
    reload after saving changes to project files.
 
+### Live page at custom domain!
+
+`<link>` : <https://kutsyi-mykhailo.online>
+
 ### Live page
 
 `<link>` : <https://react-redux-feedback-app.netlify.app>
